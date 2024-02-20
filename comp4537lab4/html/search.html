@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="../js/search.js" defer></script> <!-- Include script.js -->
+</head>
+<body>
+    <h1>Client Find Definition</h1>
+    <!-- Text Box (Word input) -->
+    <input type="text" name="Word" id="word-input" placeholder="Enter the word to define"> <br>
+    <!-- Area Box (Definition) -->
+    <textarea name="definition" id="definition" rows="4" cols="50" placeholder="Definition" readonly></textarea> <br>
+    <!-- Submit Button to call AJAX -->
+    <button type="button" id="search-button" onclick="searchDefinition()">Search</button> <br>
+    <!-- Div for feedback -->
+    <div id="feedback">Feedback</div> <br>
+    <a href="./landing.html">BACK TO LANDING</a> <br>
+    <a href="./store.html">DEFINE A TERM</a> <br>
+</body>
+</html>

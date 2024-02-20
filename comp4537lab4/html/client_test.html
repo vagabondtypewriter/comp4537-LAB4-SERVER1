@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <script>
+      function sendRequest() {
+        const name = document.getElementById("name").value;
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:3000");
+        xhr.send("name=" + name);
+        xhr.onload = function () {
+          let response = xhr.responseText;
+          document.getElementById("result").innerHTML = response;
+        }
+        console.log("ran");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>COMP4537 LAB4 CLIENT TEST</h1>
+    <input type="text" id="name" placeholder="enter your name">
+    <button onclick="sendRequest()">Send Request</button>
+    <div id="result">RES GOES HERE</div>
+  </body>
+</html>
